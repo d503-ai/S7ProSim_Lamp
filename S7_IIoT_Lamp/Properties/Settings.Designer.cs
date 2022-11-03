@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace S7ProSim_Lamp.Properties
+namespace S7_IIoT_Lamp.Properties
 {
 
 
