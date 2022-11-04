@@ -43,23 +43,23 @@
             this.lb_author = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.rb_s3 = new System.Windows.Forms.RadioButton();
-            this.rb_s2 = new System.Windows.Forms.RadioButton();
-            this.rb_s1 = new System.Windows.Forms.RadioButton();
             this.panel_sim = new System.Windows.Forms.Panel();
-            this.lb_status = new System.Windows.Forms.Label();
-            this.background_sch = new System.Windows.Forms.PictureBox();
-            this.s1 = new System.Windows.Forms.Button();
-            this.s2 = new System.Windows.Forms.Button();
+            this.picture_lamp = new System.Windows.Forms.PictureBox();
             this.s3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.s2 = new System.Windows.Forms.Button();
+            this.s1 = new System.Windows.Forms.Button();
+            this.background_sch = new System.Windows.Forms.PictureBox();
+            this.lb_status = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.rb_s1 = new System.Windows.Forms.CheckBox();
+            this.rb_s2 = new System.Windows.Forms.CheckBox();
+            this.rb_s3 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel_sim.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_lamp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_sch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // connect_btn
@@ -98,9 +98,8 @@
             this.scan_mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scan_mode.Location = new System.Drawing.Point(218, 69);
             this.scan_mode.Name = "scan_mode";
-            this.scan_mode.Size = new System.Drawing.Size(79, 29);
+            this.scan_mode.Size = new System.Drawing.Size(0, 29);
             this.scan_mode.TabIndex = 3;
-            this.scan_mode.Text = "SCAN";
             // 
             // cpu_state
             // 
@@ -108,34 +107,35 @@
             this.cpu_state.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpu_state.Location = new System.Drawing.Point(218, 25);
             this.cpu_state.Name = "cpu_state";
-            this.cpu_state.Size = new System.Drawing.Size(63, 29);
+            this.cpu_state.Size = new System.Drawing.Size(0, 29);
             this.cpu_state.TabIndex = 3;
-            this.cpu_state.Text = "CPU";
             // 
             // sbox_cpu
             // 
             this.sbox_cpu.Enabled = false;
+            this.sbox_cpu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbox_cpu.FormattingEnabled = true;
             this.sbox_cpu.Items.AddRange(new object[] {
             "RUN_P",
             "RUN",
             "STOP"});
-            this.sbox_cpu.Location = new System.Drawing.Point(33, 121);
+            this.sbox_cpu.Location = new System.Drawing.Point(33, 129);
             this.sbox_cpu.Name = "sbox_cpu";
-            this.sbox_cpu.Size = new System.Drawing.Size(121, 37);
+            this.sbox_cpu.Size = new System.Drawing.Size(121, 28);
             this.sbox_cpu.TabIndex = 4;
             this.sbox_cpu.SelectedIndexChanged += new System.EventHandler(this.change_cpu_state);
             // 
             // sbox_scan
             // 
             this.sbox_scan.Enabled = false;
+            this.sbox_scan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sbox_scan.FormattingEnabled = true;
             this.sbox_scan.Items.AddRange(new object[] {
             "Single Scan",
             "Continuous Scan"});
-            this.sbox_scan.Location = new System.Drawing.Point(33, 187);
+            this.sbox_scan.Location = new System.Drawing.Point(33, 194);
             this.sbox_scan.Name = "sbox_scan";
-            this.sbox_scan.Size = new System.Drawing.Size(121, 37);
+            this.sbox_scan.Size = new System.Drawing.Size(121, 28);
             this.sbox_scan.TabIndex = 5;
             this.sbox_scan.SelectedIndexChanged += new System.EventHandler(this.change_scan_mode);
             // 
@@ -212,40 +212,10 @@
             this.tabPage2.Text = "Simulation";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // rb_s3
-            // 
-            this.rb_s3.AutoSize = true;
-            this.rb_s3.Location = new System.Drawing.Point(238, 321);
-            this.rb_s3.Name = "rb_s3";
-            this.rb_s3.Size = new System.Drawing.Size(44, 20);
-            this.rb_s3.TabIndex = 3;
-            this.rb_s3.Text = "S3";
-            this.rb_s3.UseVisualStyleBackColor = true;
-            // 
-            // rb_s2
-            // 
-            this.rb_s2.AutoSize = true;
-            this.rb_s2.Location = new System.Drawing.Point(170, 321);
-            this.rb_s2.Name = "rb_s2";
-            this.rb_s2.Size = new System.Drawing.Size(44, 20);
-            this.rb_s2.TabIndex = 2;
-            this.rb_s2.Text = "S2";
-            this.rb_s2.UseVisualStyleBackColor = true;
-            // 
-            // rb_s1
-            // 
-            this.rb_s1.AutoSize = true;
-            this.rb_s1.Location = new System.Drawing.Point(89, 321);
-            this.rb_s1.Name = "rb_s1";
-            this.rb_s1.Size = new System.Drawing.Size(44, 20);
-            this.rb_s1.TabIndex = 1;
-            this.rb_s1.Text = "S1";
-            this.rb_s1.UseVisualStyleBackColor = true;
-            // 
             // panel_sim
             // 
             this.panel_sim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_sim.Controls.Add(this.pictureBox1);
+            this.panel_sim.Controls.Add(this.picture_lamp);
             this.panel_sim.Controls.Add(this.s3);
             this.panel_sim.Controls.Add(this.s2);
             this.panel_sim.Controls.Add(this.s1);
@@ -255,6 +225,57 @@
             this.panel_sim.Padding = new System.Windows.Forms.Padding(50, 20, 50, 20);
             this.panel_sim.Size = new System.Drawing.Size(351, 297);
             this.panel_sim.TabIndex = 0;
+            // 
+            // picture_lamp
+            // 
+            this.picture_lamp.BackColor = System.Drawing.Color.Transparent;
+            this.picture_lamp.Image = ((System.Drawing.Image)(resources.GetObject("picture_lamp.Image")));
+            this.picture_lamp.Location = new System.Drawing.Point(135, 6);
+            this.picture_lamp.Name = "picture_lamp";
+            this.picture_lamp.Size = new System.Drawing.Size(76, 64);
+            this.picture_lamp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_lamp.TabIndex = 4;
+            this.picture_lamp.TabStop = false;
+            // 
+            // s3
+            // 
+            this.s3.BackColor = System.Drawing.Color.White;
+            this.s3.Enabled = false;
+            this.s3.Location = new System.Drawing.Point(188, 139);
+            this.s3.Name = "s3";
+            this.s3.Size = new System.Drawing.Size(75, 23);
+            this.s3.TabIndex = 3;
+            this.s3.UseVisualStyleBackColor = false;
+            // 
+            // s2
+            // 
+            this.s2.BackColor = System.Drawing.Color.White;
+            this.s2.Enabled = false;
+            this.s2.Location = new System.Drawing.Point(85, 139);
+            this.s2.Name = "s2";
+            this.s2.Size = new System.Drawing.Size(75, 23);
+            this.s2.TabIndex = 2;
+            this.s2.UseVisualStyleBackColor = false;
+            // 
+            // s1
+            // 
+            this.s1.BackColor = System.Drawing.Color.White;
+            this.s1.Enabled = false;
+            this.s1.Location = new System.Drawing.Point(137, 231);
+            this.s1.Name = "s1";
+            this.s1.Size = new System.Drawing.Size(75, 23);
+            this.s1.TabIndex = 1;
+            this.s1.UseVisualStyleBackColor = false;
+            // 
+            // background_sch
+            // 
+            this.background_sch.Image = ((System.Drawing.Image)(resources.GetObject("background_sch.Image")));
+            this.background_sch.Location = new System.Drawing.Point(0, 69);
+            this.background_sch.Name = "background_sch";
+            this.background_sch.Size = new System.Drawing.Size(350, 227);
+            this.background_sch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.background_sch.TabIndex = 0;
+            this.background_sch.TabStop = false;
             // 
             // lb_status
             // 
@@ -267,55 +288,46 @@
             this.lb_status.TabIndex = 8;
             this.lb_status.Text = "Disconnected";
             // 
-            // background_sch
+            // timer
             // 
-            this.background_sch.Image = ((System.Drawing.Image)(resources.GetObject("background_sch.Image")));
-            this.background_sch.Location = new System.Drawing.Point(0, 69);
-            this.background_sch.Name = "background_sch";
-            this.background_sch.Size = new System.Drawing.Size(350, 227);
-            this.background_sch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.background_sch.TabIndex = 0;
-            this.background_sch.TabStop = false;
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.lamp_check);
             // 
-            // s1
+            // rb_s1
             // 
-            this.s1.BackColor = System.Drawing.Color.White;
-            this.s1.Enabled = false;
-            this.s1.Location = new System.Drawing.Point(137, 231);
-            this.s1.Name = "s1";
-            this.s1.Size = new System.Drawing.Size(75, 23);
-            this.s1.TabIndex = 1;
-            this.s1.UseVisualStyleBackColor = false;
+            this.rb_s1.AutoSize = true;
+            this.rb_s1.Enabled = false;
+            this.rb_s1.Location = new System.Drawing.Point(118, 321);
+            this.rb_s1.Name = "rb_s1";
+            this.rb_s1.Size = new System.Drawing.Size(45, 20);
+            this.rb_s1.TabIndex = 9;
+            this.rb_s1.Text = "S1";
+            this.rb_s1.UseVisualStyleBackColor = true;
+            this.rb_s1.CheckedChanged += new System.EventHandler(this.S1_check);
             // 
-            // s2
+            // rb_s2
             // 
-            this.s2.BackColor = System.Drawing.Color.White;
-            this.s2.Enabled = false;
-            this.s2.Location = new System.Drawing.Point(85, 139);
-            this.s2.Name = "s2";
-            this.s2.Size = new System.Drawing.Size(75, 23);
-            this.s2.TabIndex = 2;
-            this.s2.UseVisualStyleBackColor = false;
+            this.rb_s2.AutoSize = true;
+            this.rb_s2.Enabled = false;
+            this.rb_s2.Location = new System.Drawing.Point(169, 321);
+            this.rb_s2.Name = "rb_s2";
+            this.rb_s2.Size = new System.Drawing.Size(45, 20);
+            this.rb_s2.TabIndex = 10;
+            this.rb_s2.Text = "S2";
+            this.rb_s2.UseVisualStyleBackColor = true;
+            this.rb_s2.CheckedChanged += new System.EventHandler(this.S2_check);
             // 
-            // s3
+            // rb_s3
             // 
-            this.s3.BackColor = System.Drawing.Color.White;
-            this.s3.Enabled = false;
-            this.s3.Location = new System.Drawing.Point(188, 139);
-            this.s3.Name = "s3";
-            this.s3.Size = new System.Drawing.Size(75, 23);
-            this.s3.TabIndex = 3;
-            this.s3.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(135, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.rb_s3.AutoSize = true;
+            this.rb_s3.Enabled = false;
+            this.rb_s3.Location = new System.Drawing.Point(220, 321);
+            this.rb_s3.Name = "rb_s3";
+            this.rb_s3.Size = new System.Drawing.Size(45, 20);
+            this.rb_s3.TabIndex = 11;
+            this.rb_s3.Text = "S3";
+            this.rb_s3.UseVisualStyleBackColor = true;
+            this.rb_s3.CheckedChanged += new System.EventHandler(this.S3_check);
             // 
             // Form1
             // 
@@ -338,8 +350,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.panel_sim.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_lamp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.background_sch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,17 +372,17 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lb_status;
-        private System.Windows.Forms.RadioButton rb_s3;
-        private System.Windows.Forms.RadioButton rb_s2;
-        private System.Windows.Forms.RadioButton rb_s1;
         private System.Windows.Forms.Panel panel_sim;
         private System.Windows.Forms.Label lb_author;
         private System.Windows.Forms.Button s3;
         private System.Windows.Forms.Button s2;
         private System.Windows.Forms.Button s1;
         private System.Windows.Forms.PictureBox background_sch;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox picture_lamp;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.CheckBox rb_s3;
+        private System.Windows.Forms.CheckBox rb_s2;
+        private System.Windows.Forms.CheckBox rb_s1;
     }
 }
 
